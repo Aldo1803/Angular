@@ -1,0 +1,10 @@
+<h1 style="margin-left: 10px;" *ngIf="expenditure == true">Expenditures</h1>
+<h1 style="margin-left: 10px;" *ngIf="expenditure == false">Incomes</h1>
+
+<button mat-raised-button color="accent" (click)="onClick()" *ngIf="expenditure == true">See Incomes</button>
+<button mat-raised-button color="accent" (click)="onClick2()" *ngIf="expenditure == false" >See Expenditures</button>
+    <app-expenditures *ngIf="expenditure == true" ></app-expenditures>
+    <app-incomes *ngIf="expenditure == false"></app-incomes>
+
+
+

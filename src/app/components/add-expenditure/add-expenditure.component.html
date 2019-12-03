@@ -1,0 +1,35 @@
+<h1 style="margin: 10px;">Add Expenditure</h1>
+
+<div>
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" style="margin: 10px;" fxLayout="column"
+    fxLayoutAlign="start start">
+
+    <mat-form-field fxFlex="100%">
+
+
+      <input matInput placeholder="Concept" value="Concept" name="concept" #concept="ngModel"
+        [(ngModel)]=" income.concept" required>
+    </mat-form-field>
+
+    <mat-form-field fxFlex="100%">
+      <input matInput type="textarea" placeholder="description" value="description" name="description"
+        #description="ngModel" [(ngModel)]="income.description" required>
+    </mat-form-field>
+
+    <mat-form-field fxFlex="100%">
+      <input matInput placeholder="Amount" value="Amount" name="amount" #amount="ngModel" [(ngModel)]="income.amount"
+        [(ngModel)]="toSave" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" style="margin-bottom: 10px"
+      [disabled]=!registerForm.form.valid>Submit</button>
+
+
+
+
+
+
+
+  </form>
+</div>
+

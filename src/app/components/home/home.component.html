@@ -1,0 +1,65 @@
+<h1 style="margin: 10px;">{{welcome}}</h1>
+<div style="margin: 15px; margin-top: 40px; height: 100%;"  fxLayout="row" fxLayoutAlign="start start" >
+
+
+  <mat-card fxFlex="100%" style="height: 100%">
+     <mat-card style="height: 45%; background: #3f51b5;">
+      <mat-card-title style="color: white; font-size: 30px;" >
+Your balance
+      </mat-card-title>
+      <mat-card-title style="color: white;">
+        ${{user.amount}}
+      </mat-card-title>
+      <div style="margin-top: 30px;">
+      <button mat-fab  [routerLink]="['/movements']"  ><mat-icon>list</mat-icon></button>
+        <span style="margin-left: 5px;color: white; font-size: 16px;" >Movements</span>
+
+
+
+
+      </div>
+      <div style="margin-top: 10px;">
+        <button mat-fab [routerLink]="['/movements/income']">
+          <mat-icon>add</mat-icon>
+        </button>
+        <span style="margin-left: 5px;color: white; font-size: 16px;">Add income</span>
+
+
+
+      </div>
+      <div style="margin-top: 10px;">
+        <button mat-fab [routerLink]="['/movements/expenditure']">
+          <mat-icon>remove</mat-icon>
+        </button>
+        <span style="margin-left: 5px;color: white; font-size: 16px;">Add expenditure</span>
+</div>
+
+     </mat-card>
+
+    <mat-card  style="height: 45%; background: #3f51b5;">
+      <mat-card-title style="color: white; font-size: 30px;">
+        Your savings
+      </mat-card-title>
+      <mat-card-title style="color: white;">
+        ${{user.saving}}
+      </mat-card-title>
+      <div style="margin-top: 30px;">
+
+        <button mat-fab [routerLink]="['/addsaving']"  >
+          <mat-icon>add</mat-icon>
+        </button>
+        <span style="margin-left: 5px;color: white; font-size: 16px;">Add saving</span>
+
+
+      </div>
+      <div style="margin-top: 30px;">
+<button mat-fab [routerLink]="['/removesaving']" routerLinkActive="router-link-active" >
+  <mat-icon>remove</mat-icon>
+</button>
+<span style="margin-left: 5px;color: white; font-size: 16px;">Remove saving</span>
+      </div>
+
+    </mat-card>
+
+  </mat-card>
+</div>

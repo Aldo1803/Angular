@@ -1,0 +1,27 @@
+<h1 style="margin: 10px;">Add saving</h1>
+
+<div style="margin: 10px;" fxLayout="column" fxLayoutAlign="start start">
+
+
+  <form #savingForm="ngForm" (ngSubmit)="onSubmit(savingForm)" style="margin: 10px;" fxLayout="column" fxLayoutAlign="start start">
+    <mat-form-field fxFlex="100%">
+      <input matInput  placeholder="Amount to save" value="Amount to save" name="amount" #amount="ngModel" [(ngModel)]="toSave"
+        required>
+
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" style="margin-bottom: 10px" [disabled]=!savingForm.form.valid>Submit</button>
+
+
+
+
+
+
+
+  </form>
+
+
+
+
+
+</div>

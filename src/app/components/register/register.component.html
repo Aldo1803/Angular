@@ -1,0 +1,38 @@
+<h1 style="margin: 10px;">Register</h1>
+
+<div >
+<form  #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" style="margin: 10px;" fxLayout="column" fxLayoutAlign="start start">
+
+  <mat-form-field fxFlex="100%">
+
+
+    <input matInput placeholder="Email" value="Email" name="email" #email="ngModel" [(ngModel)]="user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100%">
+    <input matInput type="password" placeholder="Password" value="Password" name="password" #password="ngModel" [(ngModel)]="user.password" required>
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100%">
+    <input matInput placeholder="Name" value="Name" name="name" #name="ngModel" [(ngModel)]="user.name" required>
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100%">
+    <input matInput placeholder="Surname" value="Surname" name="surname" #surname="ngModel" [(ngModel)]="user.surname" required>
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100%">
+    <input matInput placeholder="Amount" value="Amount" name="amount" #amount="ngModel" [(ngModel)]="user.amount" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" style="margin-bottom: 10px" [disabled]=!registerForm.form.valid>Submit</button>
+
+    <a [routerLink]="[ '/login' ]">Or login</a>
+
+
+
+
+
+</form>
+</div>
+

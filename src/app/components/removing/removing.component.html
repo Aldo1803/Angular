@@ -1,0 +1,31 @@
+<h1 style="margin: 10px;">Remove saving</h1>
+
+<div style="margin: 10px;" fxLayout="column" fxLayoutAlign="start start">
+
+
+  <form #removingForm="ngForm" (ngSubmit)="onSubmit(removingForm)" style="margin: 10px;" fxLayout="column"
+    fxLayoutAlign="start start">
+    <mat-form-field fxFlex="100%">
+      <input matInput placeholder="Amount to retrieve" value="Amount to retrieve" name="amount" #amount="ngModel"
+        [(ngModel)]="toSave" required>
+
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" style="margin-bottom: 10px"
+      [disabled]=!removingForm.form.valid>Submit</button>
+
+
+
+
+
+
+
+  </form>
+
+  <mat-card style="background: #f44336;color: white;" *ngIf="show == true">
+    You don't have that amount in your savings
+  </mat-card>
+
+
+
+</div>
