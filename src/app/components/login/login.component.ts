@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
+  onSubmit(Form) {
     console.log(this.user.email);
     console.log(this.user.password);
     this.userService.login(this.user).subscribe(response => {

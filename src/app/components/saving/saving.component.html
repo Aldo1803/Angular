@@ -3,7 +3,7 @@
 <div style="margin: 10px;" fxLayout="column" fxLayoutAlign="start start">
 
 
-  <form #savingForm="ngForm" (ngSubmit)="onSubmit(savingForm)" style="margin: 10px;" fxLayout="column" fxLayoutAlign="start start">
+  <form #savingForm="ngForm" (ngSubmit)="onSubmit(savingForm)" style="margin: 10px;" fxLayout="column" fxLayoutAlign="start start" >
     <mat-form-field fxFlex="100%">
       <input matInput  placeholder="Amount to save" value="Amount to save" name="amount" #amount="ngModel" [(ngModel)]="toSave"
         required>

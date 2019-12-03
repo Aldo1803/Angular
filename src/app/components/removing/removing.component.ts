@@ -25,7 +25,7 @@ export class RemovingComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSubmit() {
+  onSubmit(Form) {
     if (this.toSave <= this.saving) {
     this.finalAmount = this.saving - parseFloat(this.toSave) ;
     this._id = this.userService.getIdentity()._id;

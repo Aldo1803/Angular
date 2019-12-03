@@ -28,7 +28,7 @@ export class AddIncomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(){
+  onSubmit(Form){
     this.amountToSave = parseFloat(this.userAmount) + parseFloat(this.toSave);
     this.user.amount = this.amountToSave;
     this.userService.addIncome(this.user).subscribe(response=> {

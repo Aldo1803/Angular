@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-saving',
@@ -26,7 +27,7 @@ export class SavingComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
+  onSubmit(Form) {
     this.finalAmount = parseFloat(this.toSave) + this.saving;
     this._id = this.userService.getIdentity()._id;
     this.user.saving = this.finalAmount;

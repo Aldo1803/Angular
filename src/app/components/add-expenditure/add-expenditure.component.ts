@@ -26,7 +26,7 @@ export class AddExpenditureComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSubmit() {
+  onSubmit(Form) {
     this.amountToSave = parseFloat(this.userAmount) - parseFloat(this.toSave);
     this.user.amount = this.amountToSave;
     this.userService.addExpenditure(this.user).subscribe(
